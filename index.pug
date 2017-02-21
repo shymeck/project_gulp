@@ -1,0 +1,233 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='description', content='Challenge #2 on FCC - Portfolio')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='assets/css/style.css')
+  header
+    nav
+      ul.menu
+        li shymeck
+        li
+          a(href='#about') about
+        li
+          a(href='#work') work
+        li
+          a(href='#skills') skills
+        li
+          a(href='#contact') contact
+        li.burger
+          a(href='javascript:void(0);' onclick='hamBurger()') <i class="fa fa-bars"></i>
+  section
+    #about.container
+      hr.about
+      .about-box
+        .face
+          img(src='//shymeck.github.io/external/img/shymeck.jpg', alt='', description='')
+        .description
+          p
+            strong Magna culpa esse elit labore voluptate aliquip
+            |  pariatur id officia nostrud elit occaecat aliqua commodo. Labore consequat incididunt sint veniam mollit veniam nisi anim pariatur voluptate aliqua. Voluptate ullamco pariatur laboris nulla fugiat aute. Elit labore enim ex eu nostrud excepteur anim sunt amet excepteur. Sint commodo dolor labore tempor Lorem ipsum do quis. Consectetur veniam aute nisi quis labore nisi mollit dolor cupidatat excepteur.
+  
+  section
+    #work.container
+      hr.work
+      .row
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal1.jpg', alt='', description='')
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal2.jpg', alt='', description='')        
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal3.jpg', alt='', description='')
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal4.jpg', alt='', description='')
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal5.jpg', alt='', description='')
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal6.jpg', alt='', description='')
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal7.jpg', alt='', description='')
+        .col-3.col-md-6.col-s-12.gallery
+          img(src='//shymeck.github.io/external/img/gal8.jpg', alt='', description='')
+  section
+    #skills.container
+      hr.skills
+      h3 Excepteur sunt sit consectetur enim et.
+      .row
+        .col-6.col-md-6.col-s-12.skill
+          .label Design
+          .skillset.skill-8
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Front-End
+          .skillset.skill-6
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label UX Design
+          .skillset.skill-6
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Consulting
+          .skillset.skill-8
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Planning
+          .skillset.skill-4
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Consulting
+          .skillset.skill-5
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Learning
+          .skillset.skill-9
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Teaching
+          .skillset.skill-4
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Javascript
+          .skillset.skill-3
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+        .col-6.col-md-6.col-s-12.skill
+          .label Go lang
+          .skillset.skill-2
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+            span
+  section
+    #contact.container
+      hr.contact
+      .row.contact-box
+        .col-6.col-md-6.col-s-12.form
+          form#contact(action='', method='post')
+            fieldset
+              input(placeholder='Name', type='text', tabindex='1', required='')
+              input(placeholder='Email address', type='email', tabindex='2', required='')
+              textarea(placeholder='Your message here....', tabindex='5', required='')
+              button#contact-submit(name='submit', type='submit', data-submit='...Sending') Send
+        .col-6.col-md-6.col-s-12.comment
+          .row
+            .col-12
+              p If you want to get in touch with me, get a quote or contact me in any other matter, please feel free to use the contact form or my details below.
+          .row
+            .col-6.cos-md-12.col-s-12.address-field
+              p Company Inc.
+              p.address
+                | Something Str. 432
+                br
+                | New York
+                br
+                | office@company.com
+                br
+                | +1 55 555 555 555
+            .col-6.col-md-12.col-s-12.icons-field
+              p Find me also on social media:
+              .icons
+                a.icon(href='https://facebook.com', target="_blank")
+                  i.fa.fa-facebook-official
+                a.icon(href='https://linked.in', target="_blank")
+                  i.fa.fa-linkedin
+                a.icon(href='https://twitter.com', target="_blank")
+                  i.fa.fa-twitter
+                a.icon(href='https://flickr.com', target="_blank")
+                  i.fa.fa-flickr
+                a.icon(href='https://snapchat.com', target="_blank")
+                  i.fa.fa-snapchat-ghost
+  footer
+    .container
+      p
+        | © shymeck 2017. Challenge @ 
+        a(href='https://www.freecodecamp.com/') FreeCodeCamp
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+  script(src='assets/js/functions.js')

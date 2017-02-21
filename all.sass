@@ -1,0 +1,353 @@
+@import url("//fonts.googleapis.com/css?family=Roboto")
+@import url("//fonts.googleapis.com/css?family=Wire+One")
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+*
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
+body
+  color: #333
+  font-family: 'Roboto', sans-serif
+  font-weight: 500
+  font-size: 20px
+
+header
+  background: url("//shymeck.github.io/external/img/hero.jpg") 40% 50%
+  height: 400px
+  object-position: cover
+  border-bottom: 1px solid #aaa
+
+nav
+  background: rgba(230, 230, 230, 0.1)
+  border-bottom: 1px solid rgba(230, 230, 230, 0.2)
+  width: 100%
+  height: 80px
+  ul
+    text-align: right
+    margin-right: 35px
+    li:first-child
+      float: left
+      width: 250px
+      margin: 10px auto 10px 35px
+      line-height: 56px
+      text-align: center
+      color: rgba(230, 230, 230, 0.7)
+      font-family: 'Wire One', sans-serif
+      font-size: 45px
+      text-transform: uppercase
+      letter-spacing: 10px
+      border: 2px solid rgba(230, 230, 230, 0.7)
+    li
+      font-weight: 600
+      float: right
+      a
+        color: rgba(240, 240, 240, 0.5)
+        text-decoration: none
+        text-transform: uppercase
+        padding: 30px 15px
+        display: block
+        &:hover
+          color: #fff
+          font-weight: 550
+          transition-duration: 300ms
+    .burger
+      display: none
+
+.container
+  width: 100%
+  max-width: 1200px
+  margin: auto
+  padding-top: 20px
+
+section
+  height: auto
+  margin: 60px 0
+
+hr
+  width: 90%
+  border-top: 2px solid #eee
+  margin: 40px auto 50px auto
+  text-align: center
+  &:after
+    display: inline-block
+    position: relative
+    top: -10px
+    background: #fff
+    padding: 0 10px
+    text-transform: uppercase
+    color: #aaa
+
+.about:after
+  content: "about me"
+
+.work:after
+  content: "my work"
+
+.skills:after
+  content: "my skills"
+
+.contact:after
+  content: "contact me"
+
+.row
+  &:before,
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+[class*="col-"]
+  float: left
+  min-height: 1px
+  padding: 0
+
+@for $i from 1 through 12
+  .col-#{$i}
+    width: 8.333333333333334% * $i
+
+.about-box
+  display: flex
+  flex-direction: row
+  width: 100%
+  min-height: 300px
+  
+.face
+  display: flex
+  flex: 1
+  order: 2
+  justify-content: center
+  align-items: center
+  img
+    max-width: 250px
+    width: 80%
+    display: flex
+    border-radius: 50%
+    object-fit: cover
+
+.description
+  display: flex
+  flex: 2
+  order: 1
+  line-height: 30px
+  padding: 30px
+  justify-content: center
+  align-items: center
+  text-align: justify
+
+.gallery
+  height: 220px
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+#skills
+  clear: both
+  h3
+    font-size: 18px
+    font-weight: 400
+    margin: 30px 0
+    text-align: center
+
+.skill
+  padding: 10px 30px
+  text-align: content
+
+.label
+  text-align: left
+
+.skillset
+  margin: 10px 0
+  line-height: 0
+  span
+    clear: both
+    display: inline-block
+    height: 5px
+    width: 10%
+    background-color: #aaa
+
+  @for $i from 1 through 10
+    &.skill-#{$i} span:nth-child(n+#{$i+1})
+      background: #eee
+
+.contact-box
+  width: 100%
+  font-size: 17px
+
+.form
+  padding: 30px
+
+input, textarea, button
+  width: 100%
+  border: 1px solid #999
+  border-radius: 3px
+  line-height: 20px
+  font-size: 17px
+  padding: 5px
+  margin: 10px 0
+  font-family: 'Roboto', sans-serif
+  color: #666
+  outline: none
+  &:focus
+    border: 1px solid #666
+
+textarea
+  height: 140px
+  resize: none
+
+.comment
+  line-height: 30px
+  padding: 30px
+  text-align: justify
+
+.form, .comment
+  min-height: 300px
+
+.address-field,
+.icons-field
+  display: block
+  margin-top: 20px
+
+.address
+  font-size: 15px
+  line-height: 20px
+
+.icon
+  color: #888
+  font-size: 30px
+  margin: 0 11px
+  &:first-child
+    margin-left: 0
+  &:hover
+    color: #333
+    transition: 300ms
+
+footer
+  background: #eee
+  border-top: 1px solid #aaa
+  height: 80px
+  text-align: center
+  p
+    color: #888
+    font-size: 14px
+    padding: 33px 0
+  a
+    color: #333
+    text-decoration: none
+  .container
+    padding: 0
+
+@media (max-width: 1091px)
+  header
+    background: url("//shymeck.github.io/external/img/hero.jpg") 50% 30%
+    min-height: 80px
+
+  .about-box
+    flex-direction: column
+  
+  .face
+    order: 1
+  
+  .description
+    order: 2
+    padding: 30px 40px
+
+  @for $i from 1 through 12
+    .col-md-#{$i}
+      width: 8.333333333333334% * $i
+
+  .container
+    max-width: 80%
+
+  .skill
+    padding: 10px 10px
+  
+  textarea
+    height: 190px
+
+@media (max-width: 767px)
+  
+  header
+    height: 80px
+    max-height: 400px
+
+  nav
+    ul
+      li:first-child
+        display: block
+      li
+        display: none
+      .burger
+        display: inline-block
+        width: 60px
+        text-align: center
+
+    ul.responsive
+      position: relative
+      width: 100%
+      margin: 0
+
+    ul.responsive li:not(:first-child)
+      display: inline
+      width: 100%
+      background: #243E67
+      
+      &:nth-child(5)
+        margin-bottom: 60px
+
+    ul.responsive li.burger
+      position: absolute
+      margin-right: 35px
+      float: right
+      right: 0
+      top: 0
+      width: 60px
+      height: 80px
+      background-color: transparent
+
+    ul.responsive li a
+      display: block
+      text-align: center
+      color: #eee
+
+  .about-box
+    flex-direction: column
+  
+  .face
+    img
+      width: 60%
+
+  .description
+    padding: 20px 0
+    font-size: 19px
+    line-height: 20px
+
+  @for $i from 1 through 12
+    .col-s-#{$i}
+      width: 8.333333333333334% * $i
+
+  .container
+    max-width: 80%
+
+  .gallery
+    height: 300px
+
+  #skills
+    h3
+      font-size: 15px
+
+  .icon
+    margin: 0 10px
+
+@media (max-width: 420px)
+  nav
+    ul
+      li:first-child
+        position: absolute
+        width: 200px
+        margin: 15px auto
+        left: 20px
+        font-size: 42px
+        line-height: 46px
