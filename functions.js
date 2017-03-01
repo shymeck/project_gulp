@@ -1,7 +1,8 @@
 $(function() {
 	smoothScroll(300);
+	hamBurger();
 });
-// smoothScroll function is applied from the document ready function
+
 function smoothScroll (duration) {
 	$('a[href^="#"]').on('click', function(event) {
 
