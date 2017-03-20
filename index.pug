@@ -4,6 +4,9 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='description', content='Challenge #2 on FCC - Portfolio')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Wire+One')
+    link(rel='stylesheet', type='text/css', href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', type='text/css', href='assets/css/style.css')
   body
     header
@@ -52,7 +55,7 @@ html(lang='en')
           .col-3.col-md-6.col-s-12.gallery
             img(src='assets/img/gal8.jpg', alt='gallery example image 8', description='gallery example image 8')
     section
-      #skills.container
+      #skills.skillbox.container
         hr.skills
         h3 Excepteur sunt sit consectetur enim et.
         .row
@@ -191,7 +194,7 @@ html(lang='en')
         hr.contact
         .row.contact-box
           .col-6.col-md-6.col-s-12.form
-            form#contact(action='', method='post')
+            form#contact.contact-form(action='', method='post')
               fieldset
                 input(placeholder='Name', type='text', tabindex='1', required='')
                 input(placeholder='Email address', type='email', tabindex='2', required='')

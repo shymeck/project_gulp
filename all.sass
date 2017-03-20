@@ -1,64 +1,77 @@
-@import url("//fonts.googleapis.com/css?family=Roboto")
-@import url("//fonts.googleapis.com/css?family=Wire+One")
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+$accent: #aaa
+$lightgray: rgba(230, 230, 230, 0.1) // #e6e6e6
+$darkergray: rgba(230, 230, 230, 0.2)
+$logo: rgba(230, 230, 230, 0.7)
+$dark: rgba(240, 240, 240, 0.5) // #f0f0f0
 
-*
-  box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
 
 body
   color: #333
-  font: 500 20px Roboto, sans-serif
+  font: 500 17px Roboto, sans-serif
+  margin: 0
+  padding: 0
 
 header
-  background: url("../img/hero.jpg") 40% 50%
+  background: url('../img/hero.jpg') 40% 50%
+  border-bottom: 1px solid $accent
+  box-sizing: border-box
   height: 400px
-  object-position: cover
-  border-bottom: 1px solid #aaa
+  object-fit: cover
 
 nav
-  background: rgba(230, 230, 230, 0.1)
-  border-bottom: 1px solid rgba(230, 230, 230, 0.2)
-  width: 100%
+  background: #e6e6e6
+  background: $lightgray
+  border-bottom: 1px solid #e6e6e6
+  border-bottom: 1px solid $darkergray
+  box-sizing: border-box
   height: 80px
+  width: 100%
+
   ul
     float: right
-    margin-right: 35px
+    margin: 0 35px 0 0
+
     li
-      font-weight: 600
+      font-weight: normal
       float: left
+
       a
+        box-sizing: border-box
+        font-size: 1.176em
         color: rgba(240, 240, 240, 0.5)
         text-decoration: none
         text-transform: uppercase
         padding: 30px 15px
         display: block
+
         &:hover
           color: #fff
-          font-weight: 550
+          font-weight: bold
           transition-duration: 300ms
+
     .burger
       display: none
 
   p
+    border: 2px solid $logo
+    box-sizing: border-box
+    color: $logo
     float: left
-    width: 250px
-    margin: 10px auto 10px 35px
-    line-height: 56px
-    text-align: center
-    color: rgba(230, 230, 230, 0.7)
     font-family: 'Wire One', sans-serif
-    font-size: 45px
-    text-transform: uppercase
+    font-size: 2.647em
     letter-spacing: 10px
-    border: 2px solid rgba(230, 230, 230, 0.7)
+    line-height: 56px
+    margin: 10px auto 10px 35px
+    text-align: center
+    text-transform: uppercase
+    width: 250px
 
 .container
-  width: 100%
-  max-width: 1200px
+  box-sizing: border-box
   margin: auto
+  max-width: 1200px
   padding-top: 20px
+  width: 100%
 
 section
   height: auto
@@ -66,45 +79,50 @@ section
 
 hr
   width: 90%
+  height: 1px
   border-top: 2px solid #eee
+  box-sizing: border-box
   margin: 40px auto 50px auto
   text-align: center
-  &:after
+  &::after
     display: inline-block
+    box-sizing: border-box
     position: relative
     top: -10px
     background: #fff
     padding: 0 10px
     text-transform: uppercase
-    color: #aaa
+    color: $accent
 
-.about:after
-  content: "about me"
+.about::after
+  content: 'about me'
 
-.work:after
-  content: "my work"
+.work::after
+  content: 'my work'
 
-.skills:after
-  content: "my skills"
+.skills::after
+  content: 'my skills'
 
-.contact:after
-  content: "contact me"
+.contact::after
+  content: 'contact me'
 
 .row
-  &:before,
-  &:after
-    content: ""
+  &::before,
+  &::after
+    content: ''
     display: table
     clear: both
 
-[class*="col-"]
-  float: left
-  min-height: 1px
-  padding: 0
+// [class*='col-']
+//   float: left
+//   min-height: 1px
+//   padding: 0
 
 @for $i from 1 through 12
   .col-#{$i}
     width: 8.333333333333334% * $i
+    float: left
+    padding: 0
 
 .about-box
   display: flex
@@ -122,10 +140,12 @@ hr
     max-width: 250px
     width: 80%
     display: flex
+    box-sizing: border-box
     border-radius: 50%
     object-fit: cover
 
 .description
+  box-sizing: border-box
   display: flex
   flex: 2
   order: 1
@@ -142,17 +162,17 @@ hr
     width: 100%
     object-fit: cover
 
-#skills
+.skillbox
   clear: both
-  h3
-    font-size: 18px
-    font-weight: 400
-    margin: 30px 0
-    text-align: center
+  
+h3
+  font-weight: normal
+  margin: 30px 0
+  text-align: center
 
 .skill
+  box-sizing: border-box
   padding: 10px 30px
-  text-align: content
 
 .label
   text-align: left
@@ -165,7 +185,7 @@ hr
     display: inline-block
     height: 5px
     width: 10%
-    background-color: #aaa
+    background-color: $accent
 
   @for $i from 1 through 10
     &.skill-#{$i} span:nth-child(n+#{$i+1})
@@ -173,24 +193,29 @@ hr
 
 .contact-box
   width: 100%
-  font-size: 17px
 
-.form
+.contact-form
+  box-sizing: border-box
   padding: 30px
+
+fieldset
+  border: 0
 
 input, textarea, button
   width: 100%
+  box-sizing: border-box
   border: 1px solid #999
   border-radius: 3px
   line-height: 20px
-  font-size: 17px
   padding: 5px
   margin: 10px 0
   font-family: 'Roboto', sans-serif
   color: #666
-  outline: none
+
   &:focus
+    box-sizing: border-box
     border: 1px solid #666
+    outline: none
 
 textarea
   height: 140px
@@ -198,6 +223,7 @@ textarea
 
 .comment
   line-height: 30px
+  box-sizing: border-box
   padding: 30px
   text-align: justify
 
@@ -210,12 +236,12 @@ textarea
   margin-top: 20px
 
 .address
-  font-size: 15px
-  line-height: 20px
+  line-height: 25px
+  color: #888
 
 .icon
   color: #888
-  font-size: 30px
+  font-size: 1.765em
   margin: 0 11px
   &:first-child
     margin-left: 0
@@ -225,12 +251,14 @@ textarea
 
 footer
   background: #eee
-  border-top: 1px solid #aaa
+  box-sizing: border-box
+  border-top: 1px solid $accent
   height: 80px
   text-align: center
   p
     color: #888
-    font-size: 14px
+    font-size: 0.824em
+    box-sizing: border-box
     padding: 33px 0
   a
     color: #333
@@ -240,7 +268,7 @@ footer
 
 @media (max-width: 1091px)
   header
-    background: url("//shymeck.github.io/external/img/hero.jpg") 50% 30%
+    background: url('//shymeck.github.io/external/img/hero.jpg') 50% 30%
     min-height: 80px
 
   .about-box
@@ -251,17 +279,21 @@ footer
   
   .description
     order: 2
+    box-sizing: border-box
     padding: 30px 40px
 
   @for $i from 1 through 12
     .col-md-#{$i}
       width: 8.333333333333334% * $i
+      float: left
+      padding: 0      
 
   .container
     max-width: 80%
 
   .skill
-    padding: 10px 10px
+    box-sizing: border-box
+    padding: 10px
   
   textarea
     height: 190px
@@ -287,9 +319,9 @@ footer
       margin: 0
 
     ul.responsive li:not(:last-child)
-      display: inline
+      display: block
       width: 100%
-      background: #243E67
+      background: #888
       
       &:nth-child(4)
         margin-bottom: 60px
@@ -318,12 +350,15 @@ footer
 
   .description
     padding: 20px 0
-    font-size: 19px
+    box-sizing: border-box
+    font-size: 1.118em
     line-height: 20px
 
   @for $i from 1 through 12
     .col-s-#{$i}
       width: 8.333333333333334% * $i
+      float: left
+      padding: 0      
 
   .container
     max-width: 80%
@@ -331,18 +366,14 @@ footer
   .gallery
     height: 300px
 
-  #skills
-    h3
-      font-size: 15px
-
   .icon
     margin: 0 10px
 
 @media (max-width: 420px)
-  nav
-    p
-      width: 200px
-      margin: 15px auto 15px 20px
-      left: 20px
-      font-size: 42px
-      line-height: 46px
+      nav
+        p
+          font-size: 2.471em
+          left: 20px
+          line-height: 46px
+          margin: 15px auto 15px 20px
+          width: 200px
